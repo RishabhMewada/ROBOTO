@@ -25,9 +25,11 @@
 
 > The how?
 
-**The project was Inspired from the S101 robot Repository and is built in fusion 360 with a minimilist Design Philosophy but yet strong  build enough to handle its own weight and the objects it picks up without any bottleneck between the servo and it built quality , and the entire robotic arm is build from ABS 3D printing material for a strong build with also some PLA in some parts of the robotic arm**
+**The project was Inspired from the S101 robot Repository and is built in fusion 360 with a minimilist Design Philosophy with a yet strong  build enough to handle its own weight and the objects it picks up without any bottleneck between the servo and it's built quality , and the entire robotic arm is build from ABS 3D printing material for a strong build with also some PLA in some parts of the robotic arm**
 
-## Hardware & Wiring
+## Hardware & Wiring Diagram
+
+**Use the Wiring diagram as the Pin map for connecting everything and use the link above the diagram to get the exact pins!**
 
 >Hardware (Robotic Arm)
 
@@ -37,14 +39,35 @@
 
 >Wiring Schematic (Robotic Arm)
 
+ [Click here to view the Schematic!](https://app.cirkitdesigner.com/project/19c6ec55-5556-4408-a9a6-c3da8fffa251)
+ 
 <img width="1280" height="640" alt="RB-1 (3)" src="https://github.com/user-attachments/assets/bd2dfecf-67b3-429d-8272-0743bf161713" />
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
- [Click here to view the Schematic!](https://app.cirkitdesigner.com/project/19c6ec55-5556-4408-a9a6-c3da8fffa251) 
+>*Hardware (Glove)*
 
- 
+-Battery pack
+1. 18650 Battery
+2. TP4056 battery charger
+3. MT608 boost converter
+4. rocker switch
+  
+-Motion capture module
+1. ESP32
+2. BNO055 IMU 9-DOF
+3. Flex Sensor
+   
+>Wiring Schematic (Glove)
+
+ [Click here to view the Schematic!](https://app.cirkitdesigner.com/project/269f68dc-bc2f-4ff6-8df4-b6a70eb212e9)
+
+<img width="1280" height="640" alt="RB-1" src="https://github.com/user-attachments/assets/1e14d738-25a4-4bad-bc1e-f999358d6251" />
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ### Bill of Materials
-### Wiring Diagram
+ 
 ### Pin Map
 
 ## Software Architecture
@@ -53,4 +76,5 @@
 ### Communication Protocol
  
 ## Usage & Demo
+ Comming Sooon !!!
 ## License
