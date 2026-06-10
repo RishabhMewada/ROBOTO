@@ -27,6 +27,10 @@
 
 **The project was Inspired from the S101 robot Repository and is built in fusion 360 with a minimilist Design Philosophy with a yet strong  build enough to handle its own weight and the objects it picks up without any bottleneck between the servo and it's built quality , and the entire robotic arm is build from ABS 3D printing material for a strong build with also some PLA in some parts of the robotic arm**
 
+<p align="center">
+<img width="1920" height="722" alt="ROBOTO-PARTS_2026-May-29_05-07-04PM-000_CustomizedView9396335264" src="https://github.com/user-attachments/assets/7fc38e2b-9d12-4ac9-9ae1-a7e20343c35a" />
+</p>
+
 ## Hardware & Wiring Diagram
 
 **Use the Wiring diagram as the Pin map for connecting everything and use the link above the diagram to get the exact pins!**
@@ -108,14 +112,74 @@
 ---
 
 > **Note:** Prices are in USD and may vary by region. All Indian suppliers ship domestically.
-> Servo power supply (5–6 V / 3 A BEC) is required separately for the arm and is not included above.
+> Servo power supply (5–6 V / 3 A BEC) is required separately for the arm and is not included above. 
 
  
 ## Software Architecture
-### System Diagram
-### Folder Structure
-### Communication Protocol
+
+- The system is split across two independent ESP32 microcontrollers communicating wirelessly in real time. The glove controller reads motion and finger data and then packages it into a compact struct, and broadcasts it over to the ESP-NOW at 50 Hz.
+  
+- The arm controller receives each packet and maps the orientation values to servo angles and it applies exponential smoothing, and drives six WP5320 servos through a PCA9685 PWM driver. No router, no Bluetooth pairing, no internet — the two boards talk directly peer-to-peer over 2.4 GHz with sub-5 ms latency
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## System Diagram
+
+<p align="center">
+ <img width="1895" height="2587" alt="Group 1" src="https://github.com/user-attachments/assets/34868a1c-8a43-4853-8362-e5542ff2e3aa" />
+</p>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Folder Structure
+
+
+## Communication Protocol
+
+- The two boards communicate exclusively over ESP-NOW — a connectionless, peer-to-peer Wi-Fi protocol built into the ESP32. No pairing process, no router required, and no TCP overhead. Once the arm's MAC address is registered as a peer on the glove, packets fire unidirectionally from glove to arm at 50 Hz with approximately 2–4 ms over-the-air latency.
+Packet structure — GlovePacket (30 bytes)
+
+```typedef struct __attribute__((packed)) {
+    float    roll;        // degrees, offset-corrected  (-180 … +180)
+    float    pitch;       // degrees, offset-corrected  (-90  … +90)
+    float    yaw;         // degrees, offset-corrected  (0    … 360)
+    float    quatW;       // quaternion W component
+    float    quatX;       // quaternion X component
+    float    quatY;       // quaternion Y component
+    float    quatZ;       // quaternion Z component
+    uint8_t  gripClose;   // 1 = close gripper, 0 = open
+    uint8_t  calMode;     // 1 = calibration reset signal, 0 = normal
+    int16_t  flexRaw;     // raw ADC value (0–4095) for diagnostics
+} GlovePacket;            // total: 30 bytes
+```
+- Transmission
+  
+| Property | Value |
+|---|---|
+| Protocol | ESP-NOW (IEEE 802.11 vendor action frames) |
+| Direction | Glove → Arm (unidirectional) |
+| Frequency | 50 Hz (every 20 ms) |
+| Packet size | 30 bytes |
+| Latency | ~2–4 ms |
+| Range | ~200 m open air, ~50 m indoors |
+| Encryption | None (add `encrypt: true` in peer config to enable) |
+| Timeout | 500 ms — arm returns to HOME if no packet received |
+
+
+- Calibration packets — 
+
+**when the user triggers calibration on the glove (BOOT button held 3 s), the glove captures its neutral orientation and flex thresholds, saves them to NVS, then sends one packet with calMode = 1. The arm receives this and moves to HOME position, resetting its own smoothing state. Normal calMode = 0 packets resume immediately after**
+
+- Connection loss handling — 
+
+**the arm tracks the timestamp of the last received packet. If 500 ms passes with no packet (glove powered off, out of range, or obstruction), all servo targets are set to HOME and the status LED blinks at 300 ms intervals until signal resumes**
  
 ## Usage & Demo
- Comming Sooon !!!
+ Comming Sooon !!! (in build stage)
+ 
 ## License
+**MIT LICENSE**
+
+
+## Zine
+ <p align="center">
+ <img width="647" height="993" alt="RB-1" src="https://github.com/user-attachments/assets/3ffca880-9faf-489d-8363-32a4f99b4ce2" />
+</p>
