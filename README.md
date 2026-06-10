@@ -11,7 +11,7 @@
 
 ## Table of Contents
 - [Overview](#overview)
-- [Hardware](#hardware--wiring)
+- [Hardware](#Hardware-&-Wiring-Diagram)
 - [Software Architecture](#software-architecture)
 
 ## Overview
@@ -67,9 +67,50 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Bill of Materials
- 
-### Pin Map
 
+> Total project cost: **~$173.31 USD**
+
+## Electronics
+
+| # | Component | Purpose | Qty | Cost (USD) | Distributor |
+|---|-----------|---------|:---:|:----------:|-------------|
+| 1 | [ESP32 WROOM-32](https://robu.in/product/esp-wroom-32-wifi-bluetooth-networking-smart-component-development-board/) | Main control unit (glove + arm) | 2 | $8.70 | Robu.in |
+| 2 | [BNO055 IMU](https://robu.in/product/df-robot-febno055-intelligent-9-axis-sensor-rmion-bno055-intelligent-9-axis-sensor-breakout/) | 9-axis IMU for arm motion tracking | 1 | $19.87 | Robu.in |
+| 3 | [PCA9685](https://robocraze.com/products/pca9685-16-channel-servo-motor-driversoldered?variant=40193677721753&country=IN&currency=INR) | 16-channel 12-bit servo driver | 1 | $2.40 | Robocraze.com |
+| 4 | [WP5320 Servo](https://hubtronics.in/wp5320) | Arm joints + gripper (×6) | 6 | $82.30 | Hubtronics.in |
+| 5 | [Flex Sensor 2.2"](https://robocraze.com/products/flex-sensor-2-2?variant=40192405504153&country=IN&currency=INR) | Gripper trigger on glove | 1 | $2.03 | Robocraze.com |
+
+## Power System
+
+| # | Component | Purpose | Qty | Cost (USD) | Distributor |
+|---|-----------|---------|:---:|:----------:|-------------|
+| 6 | [Samsung 18650 Li-Ion Battery](https://robu.in/product/samsung-18650-30q-li-ion-battery/) | Main power source for glove | 1 | $6.06 | Robu.in |
+| 7 | [18650 Battery Holder](https://robu.in/product/1-x-18650-cell-box/) | Battery housing | 1 | $6.06 | Robu.in |
+| 8 | [TP4056 Charger Module](https://robocraze.com/products/tp4056-battery-charger-c-type-module-with-protection-1?variant=46170796261600&country=IN&currency=INR) | Li-Ion battery charger with protection | 1 | $0.15 | Robocraze.com |
+| 9 | [MT3608 Boost Converter](https://robu.in/product/mt3608-2a-max-dc-dc-step-up-power-module-booster-power-module/) | Steps up battery voltage for ESP32 | 1 | $0.35 | Robocraze.com |
+| 10 | [Rocker Switch](https://robu.in/product/6a-250v-ac-spst-on-off-rocker-switch/) | Power on/off | 1 | $0.17 | Robu.in |
+
+## Mechanical & Build
+
+| # | Component | Purpose | Qty | Cost (USD) | Distributor |
+|---|-----------|---------|:---:|:----------:|-------------|
+| 11 | [3D Printing Service](https://robu.in/product/3d-printing-service1/) | Arm structure parts | 16 | $34.96 | Robu.in |
+| 12 | [Screws & Thread Inserts](https://onlyscrews.in/a/cart?cart-token=2tY5s2&link-token=10JKFq) | Assembly hardware | 1 | $4.10 | onlyscrews.in |
+
+## Glove Assembly
+
+| # | Component | Purpose | Qty | Cost (USD) | Distributor |
+|---|-----------|---------|:---:|:----------:|-------------|
+| 13 | [Fingerless Compression Glove](https://www.amazon.in/MOMISY-Copper-Infused-Fingerless-Compression-Tendonitis/dp/B09HV4BFLP) | Base for motion sensor pack | 1 | $5.02 | Amazon.in |
+| 14 | [Velcro Straps](https://www.amazon.in/Glimzo-Velcro-Tape-Buckles-Management/dp/B0GX9J13YC) | Holds battery pack on hand | 1 | $0.72 | Amazon.in |
+| 15 | [Jumper Wires (F-F 10cm)](https://robu.in/product/10cm-female-female-breadboard-jumper-dupont-2-54mm-1p-1p-cable-40-pcs/) | Module connections | 1 | $0.42 | Robu.in |
+
+---
+
+> **Note:** Prices are in USD and may vary by region. All Indian suppliers ship domestically.
+> Servo power supply (5–6 V / 3 A BEC) is required separately for the arm and is not included above.
+
+ 
 ## Software Architecture
 ### System Diagram
 ### Folder Structure
