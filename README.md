@@ -147,7 +147,7 @@
 │   │   └── arm_wiring.png       # Exported wiring diagram
 │   ├── cad/
 │   │   └── arm_assembly.step    # Full CAD assembly of the robot
-|   |   └── STL Files            #  3D models for 3D printing
+|   |   └── 3D print Files       #  3D models for 3D printing
 │   └── BOM.csv                  # Part, qty, supplier, price, link
 │
 ├── Images/
