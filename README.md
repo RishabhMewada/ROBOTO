@@ -205,7 +205,7 @@ Packet structure — GlovePacket (30 bytes)
 
 ### firmware
 
-***for the step by step guide on how to install the firmware on the ESP32 and download the  Prerequisites required for the installation of the firmware on ESP32 and make it work please go to the***
+***for the step by step guide on how to install the firmware on the ESP32 and download the  Prerequisites required for the installation of the firmware on ESP32 and make it work please go to the guide pdf***
 it would be lenghty to write it here
                                                                                  
 ```
