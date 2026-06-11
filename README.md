@@ -222,7 +222,7 @@ please follow the schematic diagram in the readme or visit the links here, and c
 
 2.  [Click here to view the Schematic!](https://app.cirkitdesigner.com/project/269f68dc-bc2f-4ff6-8df4-b6a70eb212e9) for the wiring of glove
 
-please not that the wiring in glove will require the components to be soldered via wires, which should be connected by following the schematics for both the glove and the Arm
+please note that the wiring in glove will require the components to be soldered via wires, which should be connected by following the schematics for both the glove and the Arm
 
 ## Robotic Arm build & glove build
 
