@@ -17,7 +17,7 @@
 ## Overview
 >'The why?'
  
-**The sole purpose of this project is to help people build stuff and make them learn about robotics in comparatively affordable price and tinker around, in a much easier way to build and learn** and to be honest i also wanted to learn about robotics and improve my skills and build stuff which is har to build !!
+**The sole purpose of this project is to help people build stuff and make them learn about robotics in comparatively affordable price and tinker around, in a much easier way to build and learn** and to be honest i also wanted to learn about robotics and improve my skills and build stuff which is hard to build !!
 
 >The what?
 
