@@ -208,7 +208,12 @@ Packet structure — GlovePacket (30 bytes)
 ***for the step by step guide on how to install the firmware on the ESP32 and download the  Prerequisites required for the installation of the firmware on ESP32 and make it work please go to the***
 it would be lenghty to write it here
                                                                                  
-                                                                                  ```Firmware-installation.pdf``` 
+```
+Firmware-installation.pdf
+
+``` 
+
+
 ## Wirring steps 
 
 please follow the schematic diagram in the readme or visit the links here, and connect everything via female to female jumper wires or solder them wires onto the components , i recommend jumper wires it keeps the project components resuable!
