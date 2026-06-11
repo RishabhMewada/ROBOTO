@@ -131,6 +131,34 @@
 
 ## Folder Structure
 
+```robotic-glove-arm/
+│
+├── firmware/
+│   ├── arm_esp32/
+│   │   └── arm_esp32.ino        # Arm controller — ESP-NOW RX, PCA9685, servo mapping
+│   ├── glove_esp32/
+│   │   └── glove_esp32.ino      # Glove controller — BNO055, flex sensor, ESP-NOW TX
+│   └── shared/
+│       └── config.h             # GlovePacket struct, pin defines, shared constants
+│
+├── hardware/
+│   ├── schematics/
+│   │   ├── glove_wiring.png     # Exported wiring diagram
+│   │   └── arm_wiring.png       # Exported wiring diagram
+│   ├── cad/
+│   │   └── arm_assembly.step    # Full CAD assembly of the robot
+|   |   └── STL Files            #  3D models for 3D printing
+│   └── BOM.csv                  # Part, qty, supplier, price, link
+│
+├── Images/
+│   ├── banner.png               # README header image (1500×500 px)
+|   └── robtic arm & glove       # CAD images of the robot and the glove
+│
+├── README.md
+├── CHANGELOG.md
+├── LICENSE
+└── .gitignore
+```
 
 ## Communication Protocol
 
