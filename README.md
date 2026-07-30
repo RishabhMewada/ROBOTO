@@ -226,15 +226,32 @@ please note that the wiring in glove will require the components to be soldered 
 
 ## Robotic Arm build & glove build
 
->i need to build first but here is some basic guide
+ **Robotic Arm build**
+please refer to this video made from hack club lapse , this will help you make the robotic arm easily by viewing it properly and following the steps
 
-step 1. add the base servo motor inside the first servo adapter box SB1 and then slide/clip it inside the base servo motor bracket and then attach the servo arm joint onto the motor , attach the BR/BASE rotation arm on the arm joint and add brass inserts in the BR and arm joint when attached via a solder into the four holes and add screws into those holes use 4x15mm brass inserts and 4x15MM screws
+*Video Links*
 
-Step 2.
+Base : https://lapse.hackclub.com/timelapse/fq3q5Q8XxO8g
 
+Arm : https://lapse.hackclub.com/timelapse/Uputkgdq-GtG
+
+**alternatively there is also the video in  repository file**
+
+```
+ Video-guide/
+
+```
+
+**there are also photos in the** 
+
+```
+Photos/
+
+```
+**for your reference !**
  
 ## Usage & Demo
- Comming Sooon !!! (in build stage)
+ Let me complete the build first !
  
 ## License
 **MIT LICENSE**
