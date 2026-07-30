@@ -1,0 +1,29 @@
+### Build Stage
+
+**What changed in the build stage**
+
+- A brand new base for 360 degree rotation for better wiring and cost effectiveness this decision reduced the overall cost of the base by 3$ , which helped alot with the 68$ budget  
+
+- New refined components from the flaws that where identified during the assembly of everything 
+- New diemensions and 3d print files for the servo holders due to the conflict between the servo wire output and the wall of the servo holder so extended it a little bit just right enough to fit it properly 
+
+
+**What was made during this stage?**
+
+- The main robotic arm was built with the new refined and improved components although the budget of 68$ limited the build to only the robotic arm and not the glove ( going to make it after this is approved with new flexible gripper design , and there is no gripper in the robotic arm as there was no budget to 3d print it, but with a new flexible gripper being devleoped and which will be integrated into the arm ( photos is attached at the end)
+
+**what more is required ?**
+
+- A gripper , all the glove components for a full project completion currently the robotic arm in this stage is experimently coded to run peer to peer with one esp 32 connected to the arm and one connected to the laptop which controls it via WASD keys and now it uses Inverse kinematics to make the robot move via sending the IK calculations to the robotic arm via the 2 esp 32's with the calculation done locally on the computer 
+
+**what went wrong?!**
+
+- wrong dimensions in the servo holders which was improved and added into the  robotic arm
+- I DO NOT HAVE A POWER SUPPLY TO RUN THIS ARM :skull: neither a battery so a 2s battery will do the job 
+
+so yeah it sitting here like a statue :skull:
+
+
+***All the changes are made in the repository with the new files being present in Hardware/360-design  and build guide is added as a lapse video as it would be just to hard to guide by words and would be better to watch a video instead***
+
+### Photos
