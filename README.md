@@ -17,7 +17,7 @@
 ## Overview
 >'The why?'
  
-**The sole purpose of this project is to help people build stuff and make them learn about robotics in comparatively affordable price and tinker around, which is easy to build and learn**
+**The sole purpose of this project is to help people build stuff and make them learn about robotics in comparatively affordable price and tinker around, in a much easier way to build and learn** and to be honest i also wanted to learn about robotics and improve my skills and build stuff which is hard to build !!
 
 >The what?
 
@@ -199,6 +199,39 @@ Packet structure — GlovePacket (30 bytes)
 - Connection loss handling — 
 
 **the arm tracks the timestamp of the last received packet. If 500 ms passes with no packet (glove powered off, out of range, or obstruction), all servo targets are set to HOME and the status LED blinks at 300 ms intervals until signal resumes**
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Build it !!
+
+### firmware
+
+***for the step by step guide on how to install the firmware on the ESP32 and download the  Prerequisites required for the installation of the firmware on ESP32 and make it work please go to the guide pdf***
+it would be lenghty to write it here
+                                                                                 
+```
+Firmware-installation.pdf
+
+``` 
+
+
+## Wirring steps 
+
+please follow the schematic diagram in the readme or visit the links here, and connect everything via female to female jumper wires or solder them wires onto the components , i recommend jumper wires it keeps the project components resuable!
+
+1. [Click here to view the Schematic!](https://app.cirkitdesigner.com/project/19c6ec55-5556-4408-a9a6-c3da8fffa251) for the wiring of the robotic arm
+
+2.  [Click here to view the Schematic!](https://app.cirkitdesigner.com/project/269f68dc-bc2f-4ff6-8df4-b6a70eb212e9) for the wiring of glove
+
+please note that the wiring in glove will require the components to be soldered via wires, which should be connected by following the schematics for both the glove and the Arm
+
+## Robotic Arm build & glove build
+
+>i need to build first but here is some basic guide
+
+step 1. add the base servo motor inside the first servo adapter box SB1 and then slide/clip it inside the base servo motor bracket and then attach the servo arm joint onto the motor , attach the BR/BASE rotation arm on the arm joint and add brass inserts in the BR and arm joint when attached via a solder into the four holes and add screws into those holes use 4x15mm brass inserts and 4x15MM screws
+
+Step 2.
+
  
 ## Usage & Demo
  Comming Sooon !!! (in build stage)
