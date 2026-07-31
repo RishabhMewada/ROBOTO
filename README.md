@@ -227,7 +227,7 @@ please note that the wiring in glove will require the components to be soldered 
 ## Robotic Arm build & glove build
 
  **Robotic Arm build**
-please refer to this video made from hack club lapse , this will help you make the robotic arm easily by viewing it properly and following the steps
+please refer to this video made from hack club lapse , this will help you make the robotic arm easily by viewing it properly and following the steps , currently its in video form after full completion there would be a dedicated guide pdf for everything as a go to solution
 
 *Video Links*
 
